@@ -29,7 +29,7 @@ Watch a neural network learn in real time: adjust the architecture, tweak hyperp
 ![Overview](screenshots/overview.png)
 *Full interface: controls, feature selection, network graph, and output.*
 
-![Spiral training](screenshots/spiral.png)
+![Circle training](screenshots/circle.png)
 *Network learning the spiral dataset.*
 
 ---
