@@ -1,0 +1,177 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 15px;
+  background: #f7f7f7;
+  color: #333;
+}
+
+h1 { text-align: center; color: #444; margin: 10px 0; }
+h3 { margin: 0 0 12px; text-align: center; color: #555; font-size: 15px; }
+
+/* ---------- Top toolbar ---------- */
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 7px 14px;
+  border: none;
+  border-radius: 5px;
+  background: #2b83ba;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+button:hover { background: #1f6a99; }
+
+.layer-controls button,
+.neuron-group button {
+  padding: 2px 8px;
+  font-size: 15px;
+  line-height: 1;
+}
+
+/* ---------- Form controls ---------- */
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: #666;
+  gap: 3px;
+}
+select {
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+input[type=range] { width: 100%; }
+
+.stat b { font-size: 16px; color: #2b83ba; }
+
+/* ---------- Main layout ---------- */
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.panel {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ---------- Data panel (left sliders) ---------- */
+.data-panel { width: 180px; }
+.data-panel label { margin-bottom: 14px; }
+
+/* ---------- Feature checkboxes ---------- */
+.feature-panel { width: 130px; }
+.hint { font-size: 11px; color: #888; margin: 0 0 8px; }
+
+#featureList label {
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+/* ---------- Network panel ---------- */
+.network-panel { flex: 1; min-width: 820px; }
+
+.layer-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+/* Stage wraps neuron buttons + SVG so buttons align to layers */
+.network-stage {
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.neuron-controls {
+  position: relative;
+  height: 70px;   /* taller: fits + / number / − stacked */
+  width: 100%;
+}
+
+/* Each group stacked vertically, centered on its layer x */
+.neuron-group {
+  position: absolute;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;   /* vertical: + on top, − on bottom */
+  align-items: center;
+  gap: 3px;
+  font-size: 13px;
+}
+.neuron-group b {
+  min-width: 18px;
+  text-align: center;
+  font-size: 14px;
+}
+.neuron-group button {
+  padding: 1px 8px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* ---------- Output panel ---------- */
+.output-panel { width: 470px; }
+
+.loss-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+/* Colored loss values act as legend */
+.loss-labels { font-size: 13px; line-height: 1.7; }
+#trainLoss { color: #3a5fcd; font-weight: bold; }
+#testLoss  { color: #e8743b; font-weight: bold; }
+
+.loss-labels .swatch {
+  display: inline-block;
+  width: 14px;
+  height: 3px;
+  vertical-align: middle;
+  margin-right: 5px;
+  border-radius: 2px;
+}
+
+#heatmap {
+  border: 1px solid #ddd;
+  display: block;
+}
+#colorScale {
+  display: block;
+  margin-top: 4px;
+}
+
+.checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
