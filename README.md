@@ -4,6 +4,9 @@ An interactive, browser-based visualization of neural networks for **classificat
 
 Watch a neural network learn in real time: adjust the architecture, tweak hyperparameters, engineer features, and see the decision boundary evolve live.
 
+## 🔗 Live Demo
+👉 [Try it live here](https://ktanay05.github.io/neural-playground/)
+
 ---
 
 ## ✨ Features
