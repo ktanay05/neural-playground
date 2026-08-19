@@ -175,3 +175,189 @@ input[type=range] { width: 100%; }
   margin-top: 10px;
   cursor: pointer;
 }
+
+/* ===== Tab Bar ===== */
+.tab-bar {
+  display: flex;
+  gap: 4px;
+  background: #f0f0f0;
+  border-bottom: 2px solid #ccc;
+  padding: 0 12px;
+}
+.tab-btn {
+  padding: 12px 20px;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  color: #555;
+}
+.tab-btn:hover {
+  background: #e4e4e4;
+}
+.tab-btn.active {
+  color: #1a73e8;
+  border-bottom-color: #1a73e8;
+  font-weight: 600;
+}
+/* ===== Tab Panels ===== */
+.tab-panel {
+  display: none;
+}
+.tab-panel.active {
+  display: block;
+}
+
+/* ===== Control Playground ===== */
+.metrics-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  padding: 8px 0;
+}
+.metrics-box b {
+  color: #1a73e8;
+}
+#cp-chart {
+  border: 1px solid #ddd;
+  background: #fafafa;
+}
+
+.cost-display {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: #eef4ff;
+  border-radius: 6px;
+  font-size: 15px;
+}
+.cost-display b {
+  color: #1a73e8;
+  font-size: 17px;
+}
+
+.nn-buttons {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+}
+.nn-buttons button {
+  flex: 1;
+  padding: 8px;
+  cursor: pointer;
+}
+.learned-gains {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: #f0fff4;
+  border-radius: 6px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.learned-gains b {
+  color: #1a7a3f;
+}
+.learned-gains button {
+  margin-top: 6px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+/* ===== Control Playground 3-column layout ===== */
+.cp-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr 1fr;
+  gap: 16px;
+  padding: 16px;
+  align-items: start;
+}
+.cp-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cp-col .panel {
+  margin: 0;
+}
+
+/* Number inputs for plant params */
+.cp-col-left input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  margin-top: 2px;
+  box-sizing: border-box;
+}
+
+/* NN control grid in middle column */
+.cp-nn-topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.cp-nn-topbar button {
+  padding: 6px 14px;
+  cursor: pointer;
+}
+.cp-nn-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cp-nn-controls label {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.cp-nn-controls select,
+.cp-nn-controls input {
+  width: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+/* Network stage in control tab */
+.cp-col-mid .network-stage {
+  position: relative;
+  margin-top: 8px;
+}
+#cp-netSvg {
+  border: 1px solid #eee;
+  background: #fcfcfc;
+}
+#cp-lossChart {
+  border: 1px solid #ddd;
+  background: #fafafa;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Right column tweaks */
+.cp-col-right #cp-chart {
+  width: 100%;
+  height: auto;
+}
+
+/* Ensure control-tab neuron controls align to the 520px SVG */
+.cp-col-mid .network-stage {
+  width: 520px;
+  max-width: 100%;
+}
+.cp-col-mid #cp-neuronControls {
+  width: 520px;
+}
+
+/* Make control-tab canvases and SVG fill their columns */
+.cp-col-mid #cp-netSvg,
+.cp-col-right #cp-chart,
+.cp-col-right #cp-lossChart {
+  width: 100%;
+  height: auto;
+  display: block;
+}

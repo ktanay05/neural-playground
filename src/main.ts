@@ -1,4 +1,6 @@
 import './style.css';
+import { initControlApp } from './control/controlApp';
+import { setupTabs } from './tabs';
 import * as tf from '@tensorflow/tfjs';
 import * as d3 from 'd3';
 import { PlaygroundModel } from './network/model';
@@ -204,3 +206,8 @@ $('batch').addEventListener('input', () => {
 buildFeatureUI();
 drawColorScale($('colorScale') as HTMLCanvasElement);
 rebuild();
+
+// Set up tabs. Control app initializes lazily the first time its tab opens.
+setupTabs({
+  control: initControlApp,
+});
