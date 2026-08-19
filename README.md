@@ -28,7 +28,7 @@ An interactive, browser-based playground built with **TypeScript**, **Vite**,
 Train a small neural network on 2D toy datasets and watch the decision
 boundary form in real time.
 
-![NN Playground overview](docs/screenshots/nn-overview.png)
+![NN Playground overview](screenshots/nn-overview.png)
 
 **Features:**
 - Datasets: Circle, XOR, Gaussian, Spiral
@@ -42,7 +42,7 @@ boundary form in real time.
 
 Example — a network separating the **Circle** dataset:
 
-![NN Circle dataset](docs/screenshots/nn-circle.png)
+![NN Circle dataset](screenshots/nn-circle.png)
 
 > **Changes in this release:** the app was refactored to support a top-level
 > **tab bar**. The original NN Playground is now the first tab and its
@@ -59,7 +59,7 @@ controller**. You describe *what kind of response you want*, and the network
 learns the PID gains `[Kp, Ki, Kd]` that achieve it for a spring-mass-damper
 (SMD) plant.
 
-![Control Playground overview](docs/screenshots/control-overview.png)
+![Control Playground overview](screenshots/control-overview.png)
 
 **The plant** is a second-order system:
 
